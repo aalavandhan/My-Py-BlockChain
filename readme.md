@@ -1,4 +1,4 @@
-#My-Py-BlockChain
+# My-Py-BlockChain
 
 Custom block chain implementation inspired by [Daniel Van Flymen](https://hackernoon.com/learn-blockchains-by-building-one-117428612f46).
 
@@ -17,7 +17,7 @@ python miner_node.py localhost 3001 # Miner 2
 python miner_node.py localhost 3002 # Miner 3
 ```
 
-### Transaction
+## Transaction
 A [genesis block](https://en.bitcoin.it/wiki/Genesis_block) is hard-coded into the code. User 'satoshi' gets 100,000 Coins from the earth. A miner is rewared by 100 Coins on successful addtion of a block to the block chain.
 
 1) Transaction are published to the network of miners
@@ -31,7 +31,7 @@ curl -XPOST localhost:9999/transactions/new --data "sender=satoshi&recipient=C&a
 4) A node chooses to update it's copy of the block chain through a defined notion of consensus
 
 
-### Account balances
+## Account balances
 Over multiple transactions we see that each miner's ledger is synchronized.
 ```
 curl localhost:3000/transactions/balance
